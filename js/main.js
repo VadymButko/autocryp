@@ -70,9 +70,11 @@ $(document).ready(function(){
 //плавный якорь
 
 $(function(){
-  $('a[href^="#"]').click(function(){
+  $('a[href^="#"]').click(function(e){
      var target = $(this).attr('href');
+     e.preventDefault();
      $('.header__burger,.header__menu-nav').removeClass('active');
+	 $('body').removeClass('lock');
      $('html, body').animate({scrollTop: $(target).offset().top-100}, 1000);
      return false;     
   });
