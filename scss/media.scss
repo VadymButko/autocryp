@@ -1,0 +1,308 @@
+@media screen and (max-width:1060px){
+    .header{
+        padding: 10px 0;
+    }
+    .hero{
+        &__info{
+            padding: 210px 0 300px 0;
+        }        
+        &__image{
+            padding-right: 0;
+        }
+    }
+    .benefit{
+        &__cards{
+            padding: 0 30px;
+            column-gap: 30px;
+        }
+    }
+    .pricing{
+        padding-bottom: 100px;
+        &__title{
+            padding: 0 40px;
+        }
+        &__card{
+            &-options{
+                padding: 0 15px;
+            }
+        }
+    }
+    .testimonials{
+        padding-bottom: 100px;
+        &__title{
+            padding: 30px 0 0 30px;
+            &-item{
+                font-size: 36px;
+                line-height: 42px;
+                width: 280px;
+                height: 413px;
+            }
+        }
+        &__slider{
+            padding-left: 20%;
+        }
+    }
+    .slick-dots{
+        padding-left: 40%;
+    }
+    .partners{
+        padding-bottom: 100px;
+        &__logo{
+            margin-right: 30px;
+            margin-bottom: 30px;
+            &:last-child{
+                margin-right: 0;
+        }   }
+    }
+    .footer{
+        padding-bottom: 60px;
+    }
+}
+@media screen and (max-width:767.98px){
+    body.lock{
+        overflow: hidden;
+    }
+    .header{
+        padding: 10px 0;
+        &__burger{
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 20px;         
+            z-index: 3;
+            & span{
+                position: absolute;
+                background-color: #fff;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                transition: all 0.3s ease 0s;        
+            }
+            &:before, &:after {
+                content: '';
+                background-color: #fff;
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                left: 0;
+                transition: all 0.3s ease 0s;    
+            }
+            &:before {
+                top: 0;
+            }
+            &:after {
+                bottom: 0;
+            }
+            &.active span {
+             transform: scale(0)
+            }
+            &.active:before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+            &.active:after {
+             transform: rotate(-45deg);
+             bottom: 9px;
+            }
+        }
+        &__menu-nav {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            overflow: auto;       
+            padding: 80px 15px 15px 50px;
+            font-size: 48px;
+            line-height: 56px;
+            background-color: #313A5A;            
+            &.active {
+                left: 0;
+                transition: all 1s ease 0.5s;       
+            }
+        }
+        &__logo{
+            flex: 1 auto;
+            text-align: center;
+        }
+        &__list {
+            display: block;       
+        }
+        &__menu-item{
+            margin-bottom: 30px;
+        }
+    }
+    .hero{
+        &__container{
+            display: block;
+            width: 100%;
+        }
+        &__image{
+            display: none;
+        }
+    }
+    .benefit{
+        &__cards{
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 0 80px;
+        }
+        &__card{
+            grid-column: span 3;
+            padding: 40px 0;
+        }
+    }
+    .pricing{
+        padding-top: 50px;
+        padding-bottom: 0;
+        &__title{
+            padding: 0 20px;
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 30px;
+        }
+        &__tariff{
+            margin-bottom: 30px;
+            &-button{
+                padding: 20px 30px;
+            }
+        }
+        &__card{
+            width: 100%;
+        }
+        .current{
+            display: block;
+        }
+        .card-center{
+            margin: 0;
+            width: 100%;
+        }
+    }
+    .testimonials{
+        &__wrapper{
+            height: 870px;
+        }
+        &__title{
+            &-item{
+                width: 170px;
+                height: 200px;
+                font-size: 28px;
+                line-height: 36px;
+                padding: 15px;                
+            }
+        }       
+        &__slider{
+            position: relative;
+            top: 0;
+            left: 0;
+            padding-left: 5%;            
+        }
+    }
+    .slick-list{
+        margin-bottom: 50px;
+    }
+    .slick-dots{
+        padding-left: 45%;
+    }    
+    .footer__list-separ{
+        margin: 0 15px;
+    }    
+}
+
+@media screen and (max-width:480px){
+    .header .mobile-active{
+        display: block;        
+    }
+    .mobile-passive{
+        display: none;
+    }
+    .header{
+        padding: 0;
+        &__menu-nav{
+            padding: 60px 25px;
+        }
+    }
+    .hero{
+        &__info{
+            padding: 100px 0 200px 0;
+        }
+        &__title{
+            font-size: 42px;
+            line-height: 48px;
+            margin-bottom: 30px;
+        }
+        &__subtitle{
+            margin-bottom: 30px;
+        }
+    }
+    .benefit__cards{
+        padding: 0 15px;
+    }
+    .pricing{
+        padding-top: 20px;
+        &__title{
+            padding: 0;
+            font-size: 24px;
+        }
+        &__tariff{
+            flex-direction: column;
+            margin-bottom: 10px;            
+            .button-left{
+                border-radius: 5px 5px 0 0;
+                border-bottom: 1px solid #AEFDD9;
+                border-right: none;
+            }
+            .button-right{
+                border-radius: 0 0 5px 5px;
+            } 
+        }
+        &__card{
+            padding: 25px 0;
+            &-desc{
+                margin-bottom: 20px;
+            }
+            &-button{
+                margin-top: 15px;
+            }
+        }
+    }
+    .testimonials{
+        padding-bottom: 50px;
+        &__wrapper{
+            height: 650px;
+        }
+        &__title{
+            padding: 15px 0 0 15px;
+            &-item{
+                font-size: 16px;
+                line-height: 30px;
+                width: 120px;
+                height: 150px;
+                padding: 0 0 0 5px;
+            }
+        }
+        &__slider{
+            &-item{
+                max-width: 290px;
+                padding: 30px 15px;
+            }
+        }
+    }    
+    .partners{
+        padding-bottom: 0;
+    }
+    .footer{
+        padding-bottom: 30px;
+        &__title{
+            margin-bottom: 30px;
+        }
+        &__list{
+            display: block;        
+            &-separ{
+                display: none;
+            }
+        }
+    }
+}

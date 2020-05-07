@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+@import "nullstyle.scss";
+
+$mw: 1210px; //max-width
+$fs: 'Rubik', sans-serif; //font-stack
+$pc: #FFF; //primary-color
+$sc: #5B6C94; //secondary-color
+$tc: #313A5A; //third-color
+$fc: #031D5B; //fourty-color
+$bcb: #1FDB84; //background-color-button
+$bcbe: #149157; //background-color-button-effect
+$hb: #F2F2F2; //home-background
+
+
+
+
+body{
+    font-family: $fs;    
+    font-size: 16px;
+    line-height: 34px;    
+    color: $pc;    
+}
+
+.container{
+    max-width: $mw;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    background: $tc;
+    padding-top: 25px;
+    z-index: 50;
+
+    &__burger{
+        display: none;
+    }
+
+    &__container{        
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;             
+    }
+
+    &__img{
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 58px;
+        color: $pc;
+        
+        &:hover, &:focus, &:active{
+            opacity: 0.75;
+        }
+    }
+
+    &__menu-nav{
+        flex: 1 1 auto;
+    }
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__menu-item{
+        padding-right: 37px;
+        &:last-child {
+            padding: 0;
+        }        
+    }
+
+    &__menu-link{
+        color: $pc;
+        &:hover, &:focus, &:active{
+            opacity: 0.75;
+        }
+    }   
+
+    &__menu-button-login{
+        padding-right: 38px;
+        color: $pc;
+        &:hover, &:focus, &:active{
+            opacity: 0.75;
+        }
+    }
+
+    &__menu-button-reg{ 
+        display: inline-block;       
+        color: $pc;
+        padding: 10px 25px;
+        background-color: $bcb;
+        box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
+        border-radius: 5px 0px;
+        &:hover, &:focus, &:active{
+            background-color: $bcbe;
+        }
+    }
+    .mobile-active{
+        display: none;
+    }
+}
+.header-active{
+    padding: 10px 0;
+}
+//header style end
+
+//hero style start
+.hero{
+    background-color: $tc;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__info{               
+        padding: 230px 0 313px 0;        
+    }
+
+    &__title{
+        max-width: 512px;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 57px;
+        margin-bottom: 40px;        
+    }
+
+    &__subtitle{
+        max-width: 553px;
+        margin-bottom: 60px;
+    }
+
+    &__button{
+        display: inline-block;
+        color: $pc;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 21px;
+        padding: 20px 47px;
+        background-color: $bcb;
+        box-shadow: 0px -8px 34px rgba(31, 219, 132, 0.6);
+        border-radius: 10px 0px;
+        &:hover, &:focus, &:active{
+            background-color: $bcbe;
+        }
+    }
+    &__image{
+        align-self: flex-end;
+        padding-right: 37px;                
+    }
+}
+//hero style end
+
+//benefit style start
+
+.benefit{ 
+    &__container{
+        max-width: $mw + 80px;
+        position: relative;
+    }
+    &__cards{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 80px;
+        column-gap: 100px;  
+        transform: translateY(-110px);
+        background-color: $pc;
+        box-shadow: 0px 10px 34px rgba(210, 210, 210, 0.5);
+        border-radius: 10px;        
+    }
+    &__card{
+        padding: 66px 0 82px 0;
+        grid-column: span 1;
+    }
+    &__icon{
+        padding: 19px 16px;
+        background: rgba($color: $bcb, $alpha: 0.1) ;
+        border-radius: 6px;
+        margin-bottom: 26px;
+        height: 72px;
+        width: 72px;
+    }
+    &__title{
+        position: relative;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 21px;
+        color: $fc;        
+        &:after{
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: $bcb;
+            margin-top: 29px;
+            margin-bottom: 18px;
+
+        }
+    }
+    &__subtitle{
+        color: $sc;
+    }
+}
+
+//benefit style end
+
+//plans style start
+
+.pricing{
+    background: $hb;
+    padding-top: 510px;
+    padding-bottom: 250px;
+    &__container{
+        max-width: $mw - 50px;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 64px;
+        text-align: center;
+        color: #32325C;
+        padding:0 160px;
+        margin-bottom: 60px;
+    }
+    &__tariff{
+        display: flex;        
+        justify-content: center;
+        margin-bottom: 64px;        
+        &-button{
+            display: inline-block;
+            height: 60px;                       
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 2px;
+            color: #6FDEAA;
+            background: #F1FFF8;
+            padding: 20px 37px;
+            margin: 0;            
+            &:hover{
+                border: 1px solid #AEFDD9;
+            }
+        }
+        .button-left{
+            border-radius: 5px 0 0 5px;
+            border-right: 1px solid #AEFDD9;
+        }
+        .button-right{
+            border-radius: 0 5px 5px 0;
+        } 
+        .active-tariff{
+            color: $bcb;
+            background: $pc;
+        }    
+    }
+    &__cards{
+        display: none;
+        text-align: center;
+        justify-content: center;        
+    }
+    .current{
+        display: flex;
+    }
+    &__card{                
+        width: 330px;
+        padding: 56px 0;
+        color: $sc;
+        &-title{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 32px;
+            color: #32325C;
+            margin-bottom: 31px;
+        }
+        &-price{
+            font-size: 72px;
+            line-height: 64px;
+            color: $bcb;
+            margin-bottom: 13px;
+        }
+        &-desc{            
+            margin-bottom: 60px;
+        }
+        &-options{
+            padding: 0 62px;
+            margin-bottom: 15px;
+            
+        }
+        &-button{            
+            display: inline-block;                      
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 1px;
+            color: $pc;
+            padding: 21px 46px;
+            background: $bcb;
+            box-shadow: 0px 8px 34px rgba(31, 219, 132, 0.6);
+            border-radius: 5px 0px;
+            margin-top: 42px;
+            &:hover, &:focus, &:active{
+                background-color: $bcb;
+            }
+        }
+        .left-button{
+            margin-bottom: 66px;
+        }
+    }    
+    .card-center{
+        width: 378px;
+        margin: 0 46px;
+        background: $pc;
+    }
+}
+//plans style end
+
+//testimonials style start
+
+.testimonials{
+    background: $hb;
+    padding-bottom: 200px;    
+    &__container{
+        max-width: 1440px;
+        margin: 0 auto;        
+        background: $hb;
+    }
+    &__wrapper{        
+        background: linear-gradient(to right,$hb 44%, $tc 44%);
+        height: 970px;
+    }
+    &__title{
+        padding: 30px 0 0 10%;
+        &-item{
+            padding: 40px 0 0 23px;
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 48px;
+            color: $fc;
+            width: 378px;
+            height: 413px;
+            background: url(../img/svg/rectangle.svg) no-repeat;
+            background-size: contain;             
+        }        
+    }
+    &__slider{
+        position: relative;
+        top: -178px;
+        left: 0px;
+        padding-left: 30%;                
+        
+        &-item{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            max-width: 420px;
+            padding: 80px 60px 63px 50px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 6px;
+            margin-right: 40px;
+        }
+        &-pic{
+            fill: $bcb;
+            margin-bottom: 11px;            
+        }
+        &-disc{
+            font-size: 18px;
+            line-height: 36px;
+            color: $sc;
+            margin-bottom: 42px;
+        }
+        &-name{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 36px;
+            color: $fc;            
+        }
+        &-company{
+            opacity: 0.4;
+        }
+    }    
+}
+// slider
+.slick{
+    &-slider{
+        max-width: 1440px;
+    }   
+    &-list{
+        overflow: hidden;
+        margin-bottom: 100px;
+    }
+    &-track{
+        display: flex;
+    }
+    &-dots{
+        padding-left: 30%;        
+        display: flex;        
+        & li{
+            margin-right: 16px;
+        }
+        & button{
+            font-size: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 3px solid $pc;
+            background: $tc;            
+        }
+    }
+    &-active button{
+        background: $pc;
+    }
+    &-current{
+        background: $bcb;
+        & .testimonials__slider{
+            &-pic{
+                fill: $pc;
+            }
+            &-disc{
+                color: $pc;
+            }
+            &-name{
+                color: $pc;
+            }
+            &-company{
+                opacity: 0.8;
+            }
+        }
+    }
+}
+//testimonials style end
+
+//partners style start
+.partners{
+    background: $hb;
+    padding-bottom: 180px;
+    &__container{
+        max-width: $mw - 120px;
+        text-align: center;
+        align-items: center;
+    }
+    &__title{
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 1px;
+        color: $fc;
+        margin-bottom: 46px;
+    }
+    &__logos{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    &__logo{
+        margin-right: 50px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+}
+//partners style end
+
+//footer style start
+.footer{
+    background: $hb;
+    padding-bottom: 114px;
+    &__container{
+        text-align: center;
+    }
+    &__title{
+        color: $sc;
+        margin-bottom: 46px;
+    }
+    &__list{
+        display: flex;
+        justify-content: center;
+        &-link{
+            color: $sc;
+            &:hover, &:focus, &:active{
+                opacity: 0.75;
+            }
+        }
+        &-separ{
+            color: $sc;
+            margin: 0 25px;
+        }
+    }
+}
